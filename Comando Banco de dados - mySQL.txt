@@ -1,0 +1,17 @@
+Create Table usuario (
+id INT AUTO_INCREMENT PRIMARY KEY,
+username text not null,
+email text not null,
+nascimento date,
+registro date);
+
+select * from usuario;
+
+create table blog (
+id INT AUTO_INCREMENT PRIMARY KEY,
+titulo text not null,
+tema text,
+criacao date,
+usuario integer references usuario(id));
+
+select * from usuario;
