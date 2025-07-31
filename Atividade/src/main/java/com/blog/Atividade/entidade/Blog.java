@@ -1,4 +1,4 @@
-package entidade;
+package com.blog.Atividade.entidade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
@@ -19,6 +19,8 @@ public class Blog {
     @JoinColumn(name = "usuario") //
     @JsonIgnore()
     private Usuario usuario;
+
+
 
 
     public String getTitulo() {

@@ -1,21 +1,19 @@
-package entidade;
+package com.blog.Atividade.entidade;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
-import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 public class Usuario {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String email;
-    private Date registro;
+    private LocalDate registro;
     private Date nascimento;
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<Blog> blogs;
@@ -37,11 +35,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public Date getRegistro() {
+    public LocalDate getRegistro(LocalDate data) {
         return registro;
     }
 
-    public void setRegistro(Date registro) {
+    public void setRegistro(LocalDate registro) {
         this.registro = registro;
     }
 
