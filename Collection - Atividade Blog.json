@@ -1,0 +1,262 @@
+{
+  "name": "Atividade Blog",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "Usuario",
+      "filename": "Usuario",
+      "seq": 1,
+      "root": {
+        "meta": {
+          "name": "Usuario",
+          "seq": 1
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "Adicionar Usuario",
+          "filename": "Adicionar Usuario.bru",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:8080/usuarios/adicionar",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"username\": \"diogo_teste2\",\n  \"email\": \"diogo@example.com\",\n  \"nascimento\": \"2000-04-15T00:00:00Z\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Buscar Usuario",
+          "filename": "Buscar Usuario.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:8080/usuarios/5",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Deletar Usuario",
+          "filename": "Deletar Usuario.bru",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:8080/usuarios/deletar/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Listar Usuarios",
+          "filename": "Listar Usuarios.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:8080/usuarios",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Blog",
+      "filename": "Blog",
+      "seq": 2,
+      "root": {
+        "meta": {
+          "name": "Blog",
+          "seq": 2
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "Buscar Blog por Usuario",
+          "filename": "Buscar Blog por Usuario.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:8080/blogs",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Listar Blogs",
+          "filename": "Listar Blogs.bru",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:8080/blogs/usuario/5",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Adicionar Blog",
+          "filename": "Adicionar Blog.bru",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:8080/blogs/criar/usuario/6",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"titulo\": \"Meu Quarto Blog\",\n  \"tema\": \"Tecnologia\",\n  \"criacao\": \"\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Deletar Blog",
+          "filename": "Deletar Blog.bru",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:8080/blogs/deletar/2",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Atividade Blog",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.001018524169921875,
+    "filesCount": 8
+  }
+}

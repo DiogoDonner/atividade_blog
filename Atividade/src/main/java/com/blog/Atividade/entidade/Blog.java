@@ -1,20 +1,18 @@
 package com.blog.Atividade.entidade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Blog {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String titulo;
     private String tema;
-    private Date criacao;
+    private LocalDate criacao;
     @ManyToOne
     @JoinColumn(name = "usuario") //
     @JsonIgnore()
@@ -39,11 +37,11 @@ public class Blog {
         this.tema = tema;
     }
 
-    public Date getCriacao() {
+    public LocalDate getCriacao() {
         return criacao;
     }
 
-    public void setCriacao(Date criacao) {
+    public void setCriacao(LocalDate criacao) {
         this.criacao = criacao;
     }
 
